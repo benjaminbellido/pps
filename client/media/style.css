@@ -1,0 +1,198 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav a:hover {
+    color: #5dd4d8;
+}
+
+/* Estilos del menú desplegable */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Estilos de la sección de imagen de la escuela */
+.imagen-escuela {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.imagen-escuela {
+    text-align: center;
+    padding: 10; /* Elimina el espacio interior */
+    height: 77.4vh; /* Establece la altura de la sección al 100% de la altura de la ventana */
+    background-image: url('/client/media/escuela.jpeg'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para que cubra toda la sección */
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+}
+
+.imagen-escuela h1 {
+    font-size: 36px;
+    color: #000000; /* Color de texto naranja */
+    text-shadow: 2px 2px 4px rgba(65, 159, 202, 0.5); /* Sombra de texto */
+    margin-top: 20px;
+}
+.imagen-escuela h2 {
+    font-size: 24px;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(65, 159, 202, 0.5);
+    margin-top: 230px; /* Ajusta el margen superior del subtítulo según tus preferencias */
+}
+
+/* Estilos del botón en la sección de imagen de la escuela */
+button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #449da0;
+    opacity: none;
+}
+
+/* Estilos para el carrusel */
+.carrusel {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.carrusel-contenido {
+    display: flex;
+    flex-direction: row-reverse; /* Invierte el orden de los elementos, colocando las imágenes a la derecha */
+    flex: 1;
+}
+
+.carrusel-item {
+    display: none;
+    flex: 1; /* Hace que los elementos ocupen el mismo espacio horizontalmente */
+    padding: 10px; /* Añade un espacio alrededor de los elementos */
+    text-align: right; /* Alinea el texto a la izquierda */
+}
+
+.carrusel-item.active {
+    display: flex;
+}
+
+.carrusel-item img {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+}
+.flecha {
+    font-size: 24px; /* Tamaño de fuente de las flechas */
+    position: absolute; /* Posición absoluta para colocar las flechas */
+    top: 50%; /* Alinea verticalmente las flechas al centro */
+    transform: translateY(-50%); /* Alinea verticalmente las flechas al centro */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #2a819b;
+    
+}
+
+#btnAnterior {
+    left: 10px; /* Posición a la izquierda */
+}
+#btnSiguiente {
+    right: 10px; /* Posición a la derecha */
+}
+.carrusel-item p {
+    margin: 0; /* Elimina el margen en todos los lados */
+    padding-left: 20px; /* Agrega espacio a la izquierda del texto */
+}
+.anterior {
+    transform: rotate(180deg); /* Gira la flecha anterior */
+}
+
+.siguiente {
+    transform: rotate(360deg);/* Estilo predeterminado para la flecha siguiente */
+}
+
+/* Estilos para la segunda barra de navegación */
+.barra-escuela {
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+.barra-escuela ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.barra-escuela li {
+    margin: 0 20px; /* Espacio entre los elementos de la barra de navegación */
+}
+
+.barra-escuela a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.barra-escuela a:hover {
+    color: #ff0000; /* Color de enlace al pasar el mouse */
+}
