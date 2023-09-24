@@ -13,24 +13,30 @@
     </style>
 </head>
 <body>
+    
+
     <header>
         <div class="logo">
             <img id="logo" src="/client/media/logo.jpg" alt="Logo de la Escuela">
         </div>
-        
-        <nav>
+
+        <button id="menu-toggle">☰ Menú</button>
+        <nav id="main-nav">
+            <div id="overlay"></div>
+
+
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li class="dropdown">
-                    <a href="#">Programas <span class="caret"></span></a>
+                    <a href="" target="_blank">Programas <span class="caret"></span></a>
                     <ul class="submenu">
-                        <li><a href="#">Programa 1</a></li>
-                        <li><a href="#">Programa 2</a></li>
-                        <li><a href="#">Programa 3</a></li>
+                        <li><a href="">Programa 1</a></li>
+                        <li><a href="">Programa 2</a></li>
+                        <li><a href="">Programa 3</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="" target="_blank">Biblioteca</a></li>
+                <li><a href="" target="_blank">Proyectos</a></li>
             </ul>
         </nav>
     </header>
@@ -44,38 +50,42 @@
     <script>
         // Función para mostrar mensaje de bienvenida
         function mostrarMensaje() {
-            alert("¡Bienvenido a la Escuela Nombre!");
+            alert("¡Bienvenido a la Escuela Valentin Bianchi!");
         }
     </script>
-
+    
+    <br>
+    <br>
     <section class="carrusel">
         <button id="btnAnterior" class="flecha">&#9664;</button>
         <div class="carrusel-contenido">
             <div class="carrusel-item">
                 <img src="/client/media/escuela2.jpeg" alt="Imagen 1">
-                <p>Texto de la primera imagen.</p>
+                <p>imagen 1.</p>
             </div>
             <div class="carrusel-item">
                 <img src="/client/media/escuela.jpeg" alt="Imagen 2">
-                <p>Texto de la segunda imagen.</p>
+                <p>imagen 2.</p>
             </div>
             <div class="carrusel-item">
                 <img src="/client/media/biblioteca.jpeg" alt="Imagen 3">
-                <p>Texto de la tercera imagen.</p>
+                <p>imagen 3.</p>
             </div>
         </div>
         <button id="btnSiguiente" class="flecha">&#9654;</button>
     </section>
+    <br>
+    <br>
 
 <!-- Segunda barra de navegación para información de la escuela -->
-<nav class="barra-escuela">
-    <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Dirección: Calle Ejemplo 123</a></li>
-        <!-- Agrega más elementos de la barra de navegación con la información deseada -->
-    </ul>
-</nav>
+    <nav class="barra-escuela">
+        <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=100012219702422" target="_blank">Facebook</a></li>
+            <li><a src="" href="https://www.instagram.com/valentinbianchi.4221/"target="_blank">Instagram</a></li>
+            <li><a href="https://www.google.com/maps/place/Escuela+4-221+Valentin+Bianchi/@-34.6149894,-68.3366047,17z/data=!4m6!3m5!1s0x96790807bca97cc5:0xb66c3881fad69713!8m2!3d-34.6147466!4d-68.335682!16s%2Fg%2F11c6yzssrm?entry=ttu" target="_blank">Dirección: Av. Hipólito Yrigoyen 473</a></li>
+        </ul>
+    </nav>
+
 <script src="/client/js/body.js"></script>
 </body>
 </html>
