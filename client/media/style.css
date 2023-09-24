@@ -20,8 +20,9 @@ header {
     margin: 0 auto;
     display: block;
     height: auto;
+    align-items: center;
     position: relative;
-    top: 10px; /* Mueve el logo hacia abajo */
+    top: 1px; /* Mueve el logo hacia abajo */
     left: 20px; /* Mueve el logo hacia la derecha */
 }
 /* Estilos para dispositivos de mayor tamaño (como tablet o escritorio) */
@@ -44,6 +45,7 @@ header {
 
     #main-nav ul li {
         margin-right: 20px;
+        position: relative; /* Agrega posición relativa a los elementos li */
     }
 
     #main-nav ul li:last-child {
@@ -59,6 +61,33 @@ header {
 
     #main-nav ul li a:hover {
         color: #5dd4d8;
+    }
+
+    /* Oculta inicialmente las sub-solapas */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Muestra las sub-solapas una debajo de la otra cuando se hace hover en la solapa principal */
+    #main-nav ul li:hover .submenu {
+        display: block;
+    }
+
+    /* Ajusta el estilo para mostrar las sub-solapas en columna */
+    #main-nav ul li:hover .submenu li {
+        display: block;
+        margin-right: 0;
+    }
+
+    /* Oculta las sub-solapas cuando no se hace hover en la solapa principal */
+    #main-nav ul li:not(:hover) .submenu {
+        display: none;
     }
 }
 
@@ -103,9 +132,7 @@ header {
     #menu-toggle.active {
         background-color: #5dd4d8;
     }
-}
-
-/* Estilos del menú desplegable */
+    /* Estilos del menú desplegable */
 .dropdown {
     position: relative;
     
@@ -125,11 +152,36 @@ header {
 .dropdown:hover .submenu {
     display: block;
 }
+}
+
+/* Estilos para el margen de color celeste oscuro */
+.margen-celeste {
+    background-image: linear-gradient(to top, #c4c3c3, #00b4d8, #0021b6); /* Agrega un degradado de abajo hacia arriba */
+    font-weight: bold; /* Texto en negrita */
+    padding: 40px; /* Aumenta el tamaño del margen */
+    text-align: center;
+    position: relative;
+    top: -20px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* Estilos para el texto "Materias de Escuela" */
+.materias-texto {
+    font-family: "Arial Black", sans-serif;
+    font-size: calc(100vw / 20); /* Tamaño de fuente relativo al ancho de la ventana */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #f06, #ff0);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
 /* Estilos de la sección de imagen de la escuela */
 .imagen-escuela {
     text-align: center;
-    padding: 56.7px;
+    padding: 57.6px;
 }
 
 .imagen-escuela {
@@ -144,92 +196,90 @@ header {
 
 .imagen-escuela h1 {
     font-size: 36px;
-    color: #000000; /* Color de texto naranja */
-    text-shadow: 2px 2px 4px rgba(65, 159, 202, 0.5); /* Sombra de texto */
+    color: #000000; 
+    text-shadow: 2px 2px 4px rgba(3, 168, 209, 0.5); /* Sombra de texto */
     margin-top: 20px;
 }
 .imagen-escuela h2 {
     font-size: 24px;
     color: #000000;
-    text-shadow: 2px 2px 4px rgba(65, 159, 202, 0.5);
+    text-shadow: 2px 2px 4px rgba(3, 168, 209, 0.5);
     margin-top: 230px; /* Ajusta el margen superior del subtítulo según tus preferencias */
-}
-
-/* Estilos del botón en la sección de imagen de la escuela */
-button {
-    background-color: #ff6600;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #449da0;
-    opacity: none;
 }
 
 /* Estilos para el carrusel */
 .carrusel {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    justify-content: center;
+    margin-top: 20px; /* Agrega margen en la parte superior */
+    margin-bottom: 20px; /* Agrega margen en la parte inferior */
+    position: relative;
 }
+
 
 .carrusel-contenido {
     display: flex;
-    flex-direction: row-reverse; /* Invierte el orden de los elementos, colocando las imágenes a la derecha */
+    flex-direction: row-reverse;
     flex: 1;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente el contenido */
 }
 
 .carrusel-item {
     display: none;
-    flex: 1; /* Hace que los elementos ocupen el mismo espacio horizontalmente */
-    padding: 10px; /* Añade un espacio alrededor de los elementos */
-    text-align: right; /* Alinea el texto a la izquierda */
+    flex: 1;
+    padding: 10px;
+    text-align: center; /* Alinea el texto y la imagen al centro */
 }
 
 .carrusel-item.active {
     display: flex;
+    flex-direction: column; /* Coloca el texto debajo de la imagen */
+    align-items: center;
+    justify-content: center; /* Centra vertical y horizontalmente el contenido */
 }
 
 .carrusel-item img {
     width: 300px;
     height: 200px;
     margin: 0 auto;
+    display: block; /* Centra horizontalmente la imagen */
 }
+
+/* Estilos para las flechas */
 .flecha {
-    font-size: 24px; /* Tamaño de fuente de las flechas */
-    position: absolute; /* Posición absoluta para colocar las flechas */
-    top: 50%; /* Alinea verticalmente las flechas al centro */
-    transform: translateY(-50%); /* Alinea verticalmente las flechas al centro */
+    font-size: 24px;
     background: transparent;
     border: none;
     cursor: pointer;
     color: #2a819b;
-    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Asegura que las flechas estén por encima del contenido */
 }
 
 #btnAnterior {
-    left: 10px; /* Posición a la izquierda */
+    left: 10px;
 }
+
 #btnSiguiente {
-    right: 10px; /* Posición a la derecha */
+    right: 10px;
 }
+
 .carrusel-item p {
-    margin: 0; /* Elimina el margen en todos los lados */
-    padding-left: 20px; /* Agrega espacio a la izquierda del texto */
+    margin: 0;
+    padding-left: 20px;
 }
+
 .anterior {
-    transform: rotate(180deg); /* Gira la flecha anterior */
+    transform: rotate(180deg);
 }
 
 .siguiente {
-    transform: rotate(360deg);/* Estilo predeterminado para la flecha siguiente */
+    transform: rotate(360deg);
 }
-
 /* Estilos para la segunda barra de navegación */
 .barra-escuela {
     background-color: #333;
@@ -260,3 +310,4 @@ button:hover {
 .barra-escuela a:hover {
     color: #ff0000; /* Color de enlace al pasar el mouse */
 }
+
