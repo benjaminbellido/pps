@@ -16,36 +16,99 @@ header {
 }
 
 .logo img {
-    width: 100px;
+    width: 90px;
+    margin: 0 auto;
+    display: block;
     height: auto;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    transition: color 0.3s;
     position: relative;
+    top: 10px; /* Mueve el logo hacia abajo */
+    left: 20px; /* Mueve el logo hacia la derecha */
+}
+/* Estilos para dispositivos de mayor tamaño (como tablet o escritorio) */
+@media screen and (min-width: 769px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    #main-nav {
+        display: flex;
+        align-items: center; /* Centra verticalmente los elementos */
+    }
+
+    #main-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Muestra las solapas en fila */
+    }
+
+    #main-nav ul li {
+        margin-right: 20px;
+    }
+
+    #main-nav ul li:last-child {
+        margin-right: 0; /* Elimina el margen derecho del último elemento */
+    }
+
+    #main-nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    #main-nav ul li a:hover {
+        color: #5dd4d8;
+    }
 }
 
-nav a:hover {
-    color: #5dd4d8;
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #main-nav {
+        display: none;
+    }
+
+    #menu-toggle {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    #menu-toggle.active + #main-nav {
+        display: block;
+    }
+
+    /* Estilos para el menú desplegable */
+    #main-nav ul {
+        background-color: #333;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #main-nav ul li {
+        padding: 10px;
+    }
+
+    #main-nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Estilo para el icono de menú activo */
+    #menu-toggle.active {
+        background-color: #5dd4d8;
+    }
 }
 
 /* Estilos del menú desplegable */
 .dropdown {
     position: relative;
+    
 }
 
 .submenu {
@@ -56,6 +119,7 @@ nav a:hover {
     background-color: #333;
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
 }
 
 .dropdown:hover .submenu {
@@ -65,7 +129,7 @@ nav a:hover {
 /* Estilos de la sección de imagen de la escuela */
 .imagen-escuela {
     text-align: center;
-    padding: 50px 0;
+    padding: 56.7px;
 }
 
 .imagen-escuela {

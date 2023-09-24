@@ -25,3 +25,17 @@ btnSiguiente.addEventListener('click', () => {
 
 // Mostrar el primer elemento al cargar la página
 mostrarItem(index);
+
+document.getElementById("menu-toggle").addEventListener("click", function () {
+    var mainNav = document.getElementById("main-nav");
+    var overlay = document.getElementById("overlay");
+    this.classList.toggle("active");
+    if (mainNav.style.display === "block") {
+        mainNav.style.display = "none";
+        overlay.style.display = "none"; // Oculta la capa semitransparente
+    } else {
+        mainNav.style.display = "block";
+        overlay.style.display = "block"; // Muestra la capa semitransparente
+    }
+});
+
