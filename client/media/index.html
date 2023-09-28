@@ -17,25 +17,38 @@
 
     <header>
         <div class="logo">
-            <img id="logo" src="/client/media/logo.jpg" alt="Logo de la Escuela">
+            <img id="logo" src="/media/logo.jpg" alt="Logo de la Escuela">
         </div>
 
         <button id="menu-toggle">☰ Menú</button>
         <nav id="main-nav">
-        
 
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li class="dropdown">
-                    <a href="" target="_blank">Programas <span class="caret"></span></a>
+                    <a href="" target="_blank">Ofertas educativas <span class="caret"></span></a>
                     <ul class="submenu">
-                        <li><a href="">Programa 1</a></li>
-                        <li><a href="">Programa 2</a></li>
-                        <li><a href="">Programa 3</a></li>
+                        <li><a href="">Ciclo basico</a></li>
+                        <li><a href="">Ciclo orientado</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="" target="_blank">Acerca de <span class="caret"></span></a>
+                    <ul class="submenu">
+                        <li><a href="">Visión/Mision</a></li>
+                        <li><a href="">Valores </a></li>
+                        <li><a href="">Equipo </a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="" target="_blank">Vida escolar<span class="caret"></span></a>
+                    <ul class="submenu">
+                        <li><a href="">Uniforme</a></li>
+                        <li><a href="">Horarios</a></li>
                     </ul>
                 </li>
                 <li><a href="" target="_blank">Biblioteca</a></li>
-                <li><a href="" target="_blank">Proyectos</a></li>
+            <br>
             </ul>
         </nav>
     </header>
@@ -47,26 +60,29 @@
     </section>
 
     <br>
-    <div class="margen-celeste">
-        texto
+    <section>
+        <div class="margen-celeste">
+        <h2>texto</h2>
     </div>
-    <br>
+    </section>
+    
+    <br><br><br>
 
     <section class="carrusel" id="carrusel">
         <button id="btnAnterior" class="flecha">&#9664;</button>
         <div class="carrusel-contenido">
             <div class="carrusel-item">
-                <img src="/client/media/escuela2.jpeg" alt="Imagen 1">
+                <img src="/media/escuela2.jpeg" width="350" height="350" alt="Imagen 1">
                 <h3>Título de la Imagen 1</h3>
                 <p>imagen 1.</p>
             </div>
             <div class="carrusel-item">
-                <img src="/client/media/escuela.jpeg" alt="Imagen 2">
+                <img src="/media/escuela.jpeg" width="350" height="350" alt="Imagen 2">
                 <h3>Título de la Imagen 2</h3>
                 <p>imagen 2.</p>
             </div>
             <div class="carrusel-item">
-                <img src="/client/media/biblioteca.jpeg" alt="Imagen 3">
+                <img src="/media/biblioteca.jpeg" width="350" height="350" alt="Imagen 3">
                 <h3>Título de la Imagen 3</h3>
                 <p>imagen 3.</p>
             </div>
@@ -74,9 +90,35 @@
         <button id="btnSiguiente" class="flecha">&#9654;</button>
     </section>
 
+    <br><br><br>
 
-    <br>
-    <br>
+    <section class="noticias">
+        <div class="barra"></div>
+        <h2>Noticias</h2>
+    </section>
+
+    <br><br>
+
+    <section class="nuevo-bloque">
+        <ul>
+        <section class="carrusel_noticia" id="carrusel_noticia">
+            <button id="btnAnterior" class="flecha">&#9664;</button>
+            <div class="carrusel-contenido_noticia">
+                <div class="carru-item">
+                    <iframe width="1600" height="700" src="https://www.ole.com.ar/river-plate/river-esequiel-barco-pablo-solari-gol-entrenamiento-relato_0_xDChscbYsn.html" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="carru_item">
+                    <iframe width="640" height="360" src="https://escuela4221valentinbianchi.wordpress.com/noticias/" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="carru_item">
+                    <iframe width="640" height="360" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <button id="botonSiguiente" class="flecha">&#9654;</button>
+        </section>
+        </ul>
+    </section>
+
 
 <!-- Segunda barra de navegación para información de la escuela -->
     <nav class="barra-escuela">
@@ -87,6 +129,6 @@
         </ul>
     </nav>
 
-<script src="/client/js/body.js"></script>
+<script src="/js/body.js"></script>
 </body>
 </html>

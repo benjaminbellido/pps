@@ -156,26 +156,15 @@ header {
 
 /* Estilos para el margen de color celeste oscuro */
 .margen-celeste {
-    background-image: linear-gradient(to top, #c4c3c3, #00b4d8, #0021b6); /* Agrega un degradado de abajo hacia arriba */
+    background: linear-gradient(45deg, #0077b6,#fff ,#00d8bb, #00d8bb, #00d8bb);
     font-weight: bold; /* Texto en negrita */
-    padding: 40px; /* Aumenta el tamaño del margen */
+    padding: 5px; /* Aumenta el tamaño del margen */
     text-align: center;
     position: relative;
     top: -20px;
     left: 0;
     right: 0;
     z-index: 1;
-}
-
-/* Estilos para el texto "Materias de Escuela" */
-.materias-texto {
-    font-family: "Arial Black", sans-serif;
-    font-size: calc(100vw / 20); /* Tamaño de fuente relativo al ancho de la ventana */
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(45deg, #f06, #ff0);
-    -webkit-background-clip: text;
-    color: transparent;
 }
 
 /* Estilos de la sección de imagen de la escuela */
@@ -188,7 +177,7 @@ header {
     text-align: center;
     padding: 10; /* Elimina el espacio interior */
     height: 77.4vh; /* Establece la altura de la sección al 100% de la altura de la ventana */
-    background-image: url('/client/media/escuela.jpeg'); /* Ruta de la imagen */
+    background-image: url('/media/escuela.jpeg'); /* Ruta de la imagen */
     background-size: cover; /* Ajusta la imagen para que cubra toda la sección */
     background-position: center; /* Centra la imagen horizontal y verticalmente */
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
@@ -216,7 +205,6 @@ header {
     margin-bottom: 20px; /* Agrega margen en la parte inferior */
     position: relative;
 }
-
 
 .carrusel-contenido {
     display: flex;
@@ -280,6 +268,86 @@ header {
 .siguiente {
     transform: rotate(360deg);
 }
+
+/* Estilos para el título "Noticias" */
+.noticias h2{
+    background: linear-gradient(45deg, #0077b6,#fff ,#00d8bb, #00d8bb, #00d8bb);
+    font-weight: bold; /* Texto en negrita */
+    padding: 20px; /* Aumenta el tamaño del margen */
+    text-align: center;
+    position: relative;
+    top: -20px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* Estilos para el carrusel */
+.carrusel_noticia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Agrega margen en la parte superior */
+    margin-bottom: 20px; /* Agrega margen en la parte inferior */
+    position: relative;
+}
+
+
+.carrusel-contenido_noticia {
+    display: flex;
+    flex-direction: row-reverse;
+    flex: 1;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente el contenido */
+}
+
+.carru_item {
+    display: none;
+    flex: 1;
+    padding: 10px;
+    text-align: center; /* Alinea el texto y la imagen al centro */
+}
+
+.carru_item.active {
+    display: flex;
+    flex-direction: column; /* Coloca el texto debajo de la imagen */
+    align-items: center;
+    justify-content: center; /* Centra vertical y horizontalmente el contenido */
+}
+/* Estilos para las flechas */
+.flecha {
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #2a819b;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Asegura que las flechas estén por encima del contenido */
+}
+
+#botonAnterior {
+    left: 10px;
+}
+
+#botonSiguiente {
+    right: 10px;
+}
+
+.carru-item p {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.anterior {
+    transform: rotate(180deg);
+}
+
+.siguiente {
+    transform: rotate(360deg);
+}
+
 /* Estilos para la segunda barra de navegación */
 .barra-escuela {
     background-color: #333;
