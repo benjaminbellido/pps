@@ -76,6 +76,26 @@ document.getElementById("menu-toggle").addEventListener("click", function () {
     }
 });
 
+function cambiarImagenSiguiente() {
+    index = (index + 1) % carruselItems.length;
+    mostrarItem(index);
+}
+
+function cambiarImagenAnterior() {
+    index = (index - 1 + carruselItems.length) % carruselItems.length;
+    mostrarItem(index);
+}
+
+botonAnterior.addEventListener('click', () => {
+    cambiarImagenAnterior();
+});
+
+botonSiguiente.addEventListener('click', () => {
+    cambiarImagenSiguiente();
+});
+
+// Mostrar el primer elemento al cargar la página
+mostrarItem(index);
 // Agregar eventos de mouse para mostrar/ocultar las flechas al pasar el puntero
 const carrusel_noticia = document.querySelector('.carrusel_noticia');
 

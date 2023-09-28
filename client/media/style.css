@@ -60,7 +60,7 @@ header {
     }
 
     #main-nav ul li a:hover {
-        color: #5dd4d8;
+        color: #00d8bb;
     }
 
     /* Oculta inicialmente las sub-solapas */
@@ -130,7 +130,7 @@ header {
 
     /* Estilo para el icono de menú activo */
     #menu-toggle.active {
-        background-color: #5dd4d8;
+        background-color: #00d8bb;
     }
     /* Estilos del menú desplegable */
 .dropdown {
@@ -177,7 +177,7 @@ header {
     text-align: center;
     padding: 10; /* Elimina el espacio interior */
     height: 77.4vh; /* Establece la altura de la sección al 100% de la altura de la ventana */
-    background-image: url('/media/escuela.jpeg'); /* Ruta de la imagen */
+    background-image: url('/client/media/escuela.jpeg'); /* Ruta de la imagen */
     background-size: cover; /* Ajusta la imagen para que cubra toda la sección */
     background-position: center; /* Centra la imagen horizontal y verticalmente */
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
