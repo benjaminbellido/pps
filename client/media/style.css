@@ -16,7 +16,7 @@ header {
 }
 
 .logo img {
-    width: 90px;
+    width: 200px;
     margin: 0 auto;
     display: block;
     height: auto;
@@ -60,7 +60,7 @@ header {
     }
 
     #main-nav ul li a:hover {
-        color: #00d8bb;
+        color: #00e1ff;
     }
 
     /* Oculta inicialmente las sub-solapas */
@@ -71,7 +71,7 @@ header {
         left: 0;
         background-color: #333;
         padding: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 5px 3px 6px #00e1ff;        
     }
 
     /* Muestra las sub-solapas una debajo de la otra cuando se hace hover en la solapa principal */
@@ -99,11 +99,12 @@ header {
 
     #menu-toggle {
         display: block;
-        background-color: #333;
+        background-color: #474747;
         color: #fff;
         border: none;
         padding: 10px 20px;
         cursor: pointer;
+        z-index: 1;
     }
 
     #menu-toggle.active + #main-nav {
@@ -116,6 +117,7 @@ header {
         list-style: none;
         padding: 0;
         margin: 0;
+        z-index: 1;
     }
 
     #main-nav ul li {
@@ -130,7 +132,8 @@ header {
 
     /* Estilo para el icono de menú activo */
     #menu-toggle.active {
-        background-color: #00d8bb;
+        background-color: #474747;
+        box-shadow: 0 4px 6px #00e1ff;
     }
     /* Estilos del menú desplegable */
 .dropdown {
@@ -145,7 +148,7 @@ header {
     left: 0;
     background-color: #333;
     padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px #00e1ff;
     
 }
 
@@ -156,9 +159,9 @@ header {
 
 /* Estilos para el margen de color celeste oscuro */
 .margen-celeste {
-    background: linear-gradient(45deg, #0077b6,#fff ,#00d8bb, #00d8bb, #00d8bb);
+    background: linear-gradient(45deg, #005888, #0275e0,#b1b1b1, #b1b1b1, #00e1ff ,#00e1ff, #00e1ff, #00e1ff, #00e1ff);
     font-weight: bold; /* Texto en negrita */
-    padding: 5px; /* Aumenta el tamaño del margen */
+    padding: 2px; /* Aumenta el tamaño del margen */
     text-align: center;
     position: relative;
     top: -20px;
@@ -186,13 +189,13 @@ header {
 .imagen-escuela h1 {
     font-size: 36px;
     color: #000000; 
-    text-shadow: 2px 2px 4px rgba(3, 168, 209, 0.5); /* Sombra de texto */
+    text-shadow: 2px 2px 4px #00e1ff; /* Sombra de texto */
     margin-top: 20px;
 }
 .imagen-escuela h2 {
     font-size: 24px;
     color: #000000;
-    text-shadow: 2px 2px 4px rgba(3, 168, 209, 0.5);
+    text-shadow: 2px 2px 4px #00e1ff;
     margin-top: 230px; /* Ajusta el margen superior del subtítulo según tus preferencias */
 }
 
@@ -205,7 +208,6 @@ header {
     margin-bottom: 20px; /* Agrega margen en la parte inferior */
     position: relative;
 }
-
 .carrusel-contenido {
     display: flex;
     flex-direction: row-reverse;
@@ -213,24 +215,21 @@ header {
     align-items: center;
     justify-content: center; /* Centra horizontalmente el contenido */
 }
-
 .carrusel-item {
     display: none;
     flex: 1;
     padding: 10px;
     text-align: center; /* Alinea el texto y la imagen al centro */
 }
-
 .carrusel-item.active {
     display: flex;
     flex-direction: column; /* Coloca el texto debajo de la imagen */
     align-items: center;
     justify-content: center; /* Centra vertical y horizontalmente el contenido */
 }
-
 .carrusel-item img {
-    width: 300px;
-    height: 200px;
+    width: 600px;
+    height: 370px;
     margin: 0 auto;
     display: block; /* Centra horizontalmente la imagen */
 }
@@ -241,37 +240,32 @@ header {
     background: transparent;
     border: none;
     cursor: pointer;
-    color: #2a819b;
+    color: #0051ff;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1; /* Asegura que las flechas estén por encima del contenido */
 }
-
 #btnAnterior {
     left: 10px;
 }
-
 #btnSiguiente {
     right: 10px;
 }
-
 .carrusel-item p {
     margin: 0;
     padding-left: 20px;
 }
-
 .anterior {
     transform: rotate(180deg);
 }
-
 .siguiente {
     transform: rotate(360deg);
 }
 
 /* Estilos para el título "Noticias" */
 .noticias h2{
-    background: linear-gradient(45deg, #0077b6,#fff ,#00d8bb, #00d8bb, #00d8bb);
+    background: linear-gradient(45deg, #005888, #0275e0,#b1b1b1, #b1b1b1, #00e1ff, #00e1ff, #00e1ff, #00e1ff, #00e1ff);
     font-weight: bold; /* Texto en negrita */
     padding: 20px; /* Aumenta el tamaño del margen */
     text-align: center;
@@ -282,79 +276,71 @@ header {
     z-index: 1;
 }
 
-/* Estilos para el carrusel */
-.carrusel_noticia{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px; /* Agrega margen en la parte superior */
-    margin-bottom: 20px; /* Agrega margen en la parte inferior */
-    position: relative;
+/* Whatsapp */
+element.style {
+    margin-bottom: 50px;
 }
-
-
-.carrusel-contenido_noticia {
-    display: flex;
-    flex-direction: row-reverse;
-    flex: 1;
-    align-items: center;
-    justify-content: center; /* Centra horizontalmente el contenido */
+.btn-floating.fixed-bottom {
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+    right: 20px;
 }
-
-.carru_item {
-    display: none;
-    flex: 1;
-    padding: 10px;
-    text-align: center; /* Alinea el texto y la imagen al centro */
+.btn-whatsapp {
+    z-index: 999;
+    color: #fff;
+    background-color: #4dc247;
+    box-shadow: 2px 2px 6px rgba(0,0,0,.4);
+    border-radius: 50%;
+    border: 1;
 }
-
-.carru_item.active {
-    display: flex;
-    flex-direction: column; /* Coloca el texto debajo de la imagen */
-    align-items: center;
-    justify-content: center; /* Centra vertical y horizontalmente el contenido */
-}
-/* Estilos para las flechas */
-.flecha {
-    font-size: 24px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: #2a819b;
+.btn-floating {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1; /* Asegura que las flechas estén por encima del contenido */
+    top: 0;
+    right: 0;
+    padding: 3px 5px;
+    color: rgba(255,255,255,.8);
+    fill: rgba(255,255,255,.8);
+    background-color: #000;
+    border: 1px solid rgba(255,255,255,.8);
+    font-size: 18px;
+    z-index: 100;
+}
+.visible-when-content-ready {
+    visibility: visible!important;
+}
+a {
+    color: #fff;
+    font-family: montserrat,Sans-serif;
+}
+.btn-whatsapp svg {
+    width: 30px;
+    height: 30px;
+    padding: 5px 2px;
+    fill: #fff;
+    vertical-align: middle;
+}
+.btn-whatsapp {
+    z-index: 999;
+    color: #fff;
+    background-color: #4dc247;
+    box-shadow: 2px 2px 6px rgba(0,0,0,.4);
+    border-radius: 50%;
+    border: 0;
+}
+user agent stylesheet
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
 }
 
-#botonAnterior {
-    left: 10px;
-}
-
-#botonSiguiente {
-    right: 10px;
-}
-
-.carru-item p {
-    margin: 0;
-    padding-left: 20px;
-}
-
-.anterior {
-    transform: rotate(180deg);
-}
-
-.siguiente {
-    transform: rotate(360deg);
-}
 
 /* Estilos para la segunda barra de navegación */
 .barra-escuela {
     background-color: #333;
     color: #ffffff;
-    padding: 10px 0;
+    padding: 25px 0;
 }
-
 .barra-escuela ul {
     list-style: none;
     display: flex;
@@ -363,19 +349,36 @@ header {
     margin: 0;
     padding: 0;
 }
-
 .barra-escuela li {
     margin: 0 20px; /* Espacio entre los elementos de la barra de navegación */
 }
-
 .barra-escuela a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-weight: bold;
     transition: color 0.3s;
 }
-
 .barra-escuela a:hover {
-    color: #ff0000; /* Color de enlace al pasar el mouse */
+    color: #00a2ff; /* Color de enlace al pasar el mouse */
 }
 
+/* Logo de instagram y facebook */
+.svg-icon-foot {
+    fill: #00a2ff;
+}
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1.1em;
+    overflow: visible;
+    vertical-align: -0.1250em;
+}
+user agent stylesheet
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+.footer .rounded-icon {
+    color: #00ffdd;
+    background-color: #00a2ff;
+}
