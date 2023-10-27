@@ -1,9 +1,6 @@
 const carruselItems = document.querySelectorAll('.carrusel-item');
 const btnAnterior = document.getElementById('btnAnterior');
 const btnSiguiente = document.getElementById('btnSiguiente');
-const carru_item = document.querySelectorAll('.carru-item');
-const botonAnterior = document.getElementById('botonAnterior');
-const botonSiguiente = document.getElementById('botonSiguiente');
 let index = 0;
 let intervalId; // Variable para almacenar el intervalo de cambio automático
 
@@ -75,6 +72,3 @@ document.getElementById("menu-toggle").addEventListener("click", function () {
         overlay.style.display = "block"; // Muestra la capa semitransparente
     }
 });
-
-// bloque noticia
-
