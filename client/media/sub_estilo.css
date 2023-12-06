@@ -1,0 +1,320 @@
+/* Estilos generales */
+body {
+    margin: 0%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #b1b1b1;
+  }
+
+  body{
+	margin: 0;
+	padding: 0;
+	background-color: #0e6cc4;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+/*waves****************************/
+
+
+.box {
+	position: fixed;
+	top: 0;
+	transform: rotate(80deg);
+	left: 0;
+}
+
+.wave {
+	position: fixed;
+	top: 0;
+	left: 0;
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  background: #0af;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 7000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 7500ms infinite linear;
+	position: fixed;
+	background-color: #77daff;
+}
+
+.wave.-two {
+  animation: drift 3000ms infinite linear;
+  opacity: .1;
+  background: black;
+	position: fixed;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+/*LOADING SPACE*/
+
+.contain {
+	animation-delay: 4s;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  background: #25a7d7;
+  background: -webkit-linear-gradient(#25a7d7, #2962FF);
+  background: linear-gradient(#25a7d7, #25a7d7);
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+}
+
+/*Animation*/
+.icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
+.icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
+.icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
+
+.icon img {
+  -webkit-animation: anim 2s ease infinite;
+  animation: anim 2s ease infinite;
+  -webkit-transform: scale(0,0) rotateZ(180deg);
+  transform: scale(0,0) rotateZ(180deg);
+}
+
+@-webkit-keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+@keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+/* Estilos iniciales del encabezado */
+header {
+    background-color: #333;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
+}
+  .logo img {
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    height: auto;
+    align-items: center;
+    position: relative;
+    top: 1px; /* Mueve el logo hacia abajo */
+    left: 20px; /* Mueve el logo hacia la derecha */
+  }
+
+/* Estilos para dispositivos de mayor tamaño (como tablet o escritorio) */
+@media screen and (min-width: 769px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    #main-nav {
+        display: flex;
+        align-items: center; /* Centra verticalmente los elementos */
+    }
+
+    #main-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Muestra las solapas en fila */
+    }
+
+    #main-nav ul li {
+        margin-right: 20px;
+        position: relative; /* Agrega posición relativa a los elementos li */
+    }
+
+    #main-nav ul li:last-child {
+        margin-right: 0; /* Elimina el margen derecho del último elemento */
+    }
+
+    #main-nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    #main-nav ul li a:hover {
+        color: #00e1ff;
+    }
+
+    /* Oculta inicialmente las sub-solapas */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        padding: 10%;
+        box-shadow: 2px 7px 10px #00e1ff;
+        
+             
+    }
+
+    /* Muestra las sub-solapas una debajo de la otra cuando se hace hover en la solapa principal */
+    #main-nav ul li:hover .submenu {
+        display: block;
+        padding-top: 3%;
+    }
+
+    /* Ajusta el estilo para mostrar las sub-solapas en columna */
+    #main-nav ul li:hover .submenu li {
+        display: block;
+        margin-right: 0;
+        margin-top: 2px;
+    }
+
+    /* Oculta las sub-solapas cuando no se hace hover en la solapa principal */
+    #main-nav ul li:not(:hover) .submenu {
+        display: none;
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #main-nav {
+        display: none;
+    }
+    #menu-toggle {
+        display: block;
+        background-color: #474747;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    #menu-toggle.active + #main-nav {
+        display: block;
+    }
+    /* Estilos para el menú desplegable */
+    #main-nav ul {
+        background-color: #333;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+    }
+    #main-nav ul li {
+        padding: 10px;
+    }
+    #main-nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+    }
+    /* Estilo para el icono de menú activo */
+    #menu-toggle.active {
+        background-color: #474747;
+        box-shadow: 0 4px 6px #00e1ff;
+    }
+    /* Estilos del menú desplegable */
+.dropdown {
+    position: relative;
+    
+}
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0 4px 6px #00e1ff;
+    
+}
+.dropdown:hover .submenu {
+    display: block;
+}
+}
+
+
+/* Estilos para la sección de la imagen */
+#imagen {
+    width: 75%;
+    display: flex;
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
+
+#img_orientado {
+    width: 50%;
+    display: flex;
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
