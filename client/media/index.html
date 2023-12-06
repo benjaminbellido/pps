@@ -8,16 +8,14 @@
     <meta name="robots" content="index, follow"> 
     <link rel="icon" type="image/jpg" href="/client/media/logo-removebg-preview.png">
     <meta name="description" content="Pagina web de la escuela Valentin Bianchi">
-    <style>
-        body{
-    font-family: Arial, sans-serif;
-    background: #b1b1b1;
-  }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-<body>
-    
 
+
+<body>
     <header>
         <div class="logo">
             <img id="logo" src="/client/media/logo-removebg-preview.png" alt="Logo de la Escuela">
@@ -27,27 +25,19 @@
         <nav id="main-nav">
 
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a id="#Inicio" href="/client/media/index.html">Inicio</a></li>
                 <li class="dropdown">
                     <a href="" target="_blank"> Ofertas educativas <span class="caret"></span></a>
                     <ul class="submenu">
-                        <li><a href=""> Ciclo basico </a></li>
-                        <li><a href=""> Ciclo orientado  </a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="" target="_blank"> Acerca de <span class="caret"></span></a>
-                    <ul class="submenu">
-                        <li><a href=""> Visión/Mision </a></li>
-                        <li><a href=""> Valores </a></li>
-                        <li><a href=""> Equipo </a></li>
+                        <li><a href="/client/media/ciclo_basico.html"> Ciclo basico </a></li>
+                        <li><a href="/client/media/ciclo_orientado.html"> Ciclo orientado  </a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="" target="_blank"> Vida escolar <span class="caret"></span></a>
                     <ul class="submenu">
-                        <li><a href=""> Uniforme </a></li>
-                        <li><a href=""> Horarios </a></li>
+                        <li><a href="/client/media/uniforme.html"> Uniforme </a></li>
+                        <li><a href="/client/media/horarios.html"> Horarios </a></li>
                     </ul>
                 </li>
                 <li><a href="https://escuela4221valentinbianchi.wordpress.com/biblioteca/" target="_blank"> Biblioteca </a></li>
@@ -75,7 +65,7 @@
         <button id="btnAnterior" class="flecha">&#9664;</button>
         <div class="carrusel-contenido">
             <div class="carrusel-item">
-                <img loading="lazy" src="/client/media/descarga.jpeg"  alt="Imagen 1">
+                <img loading="lazy" src="/client/media/libros.png"  alt="Imagen 1">
                 <h3>Título de la Imagen 1</h3>
                 <p>imagen 1.</p>
             </div>
@@ -97,8 +87,50 @@
 
     <section class="noticias">
         <div class="barra"></div>
-        <h2>Noticias</h2>
+        <h2>Acerca de</h2>
     </section>
+
+    <div class="fondo">
+<section>
+        <footer class="ventaja" id = "Ventajas">
+                <section class="container">
+                    <div class="ventajas-container">
+                        <div class="ventajas">
+                            <figure>
+                                <img src="/client/media/biblioteca.jpeg">
+                            </figure>
+                            <div class="contenidos">
+                                <h3>Vision/Mision</h3>
+                                <p>texto.</p>
+                            </div>
+                        </div>
+
+                        <div class="ventajas">
+                            <figure>
+                                <img src="/client/media/biblioteca.jpeg">
+                            </figure>
+                            <div class="contenidos">
+                                <h3>Valores</h3>
+                                <p>Texto.</p>
+                            </div>
+                        </div>
+
+                        <div class="ventajas">
+                            <figure>
+                                <img src="/client/media/biblioteca.jpeg">
+                            </figure>
+                            <div class="contenidos">
+                                <h3>Equipo</h3>
+                                <p>texto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </footer>
+    </section>
+
+    </div>
+    
 
     
     <a href="https://borv.short.gy/V.Bianchi" target="_blank" class="js-btn-fixed-bottom btn-whatsapp btn-floating fixed-bottom visible-when-content-ready" aria-label="Comunicate por WhatsApp escuela4221valentinbianchi" style="margin-bottom: 50px;">
@@ -107,27 +139,61 @@
     </a>
         <br><br>
 
-    <iframe loading="lazy" width="640" height="360" src="https://escuela4221valentinbianchi.wordpress.com/noticias/" frameborder="0" allowfullscreen></iframe>
 
 
-<!-- Segunda barra de navegación para información de la escuela -->
-<footer>
-    <nav class="barra-escuela">
-        <ul>
-            <li>
-                <a class="footer-icon rounded-icon" href="https://www.instagram.com/valentinbianchi.4221/" target="_blank" aria-label="Seguinos en instagram">
-                    <svg name="instagram" class="svg-inline--fa svg-icon-foot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg> Instagram </a>
-            </li>
-           <li>
-            <a class="footer-icon rounded-icon" href="https://www.facebook.com/profile.php?id=100012219702422" target="_blank" aria-label="Seguinos en facebook">
-                <svg class="svg-inline--fa svg-icon-foot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>  Facebook</a>
-           </li>
-                
-            <li><a href="https://www.google.com/maps/place/Escuela+4-221+Valentin+Bianchi/@-34.6149894,-68.3366047,17z/data=!4m6!3m5!1s0x96790807bca97cc5:0xb66c3881fad69713!8m2!3d-34.6147466!4d-68.335682!16s%2Fg%2F11c6yzssrm?entry=ttu" target="_blank"> Dirección: Av. Hipólito Yrigoyen 473</a></li>
-        </ul>
-    </nav>
+        <footer class="contacto" id="contacto">
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3283.571739125422!2d-68.3366047!3d-34.6149894!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96790807bca97cc5%3A0xb66c3881fad69713!2sEscuela%204-221%20Valentin%20Bianchi!5e0!3m2!1ses!2sar!4v1701730980337!5m2!1ses!2sar"
+                    width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </footer>
+        
+
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="#">
+                    <img src="/client/media/logo-removebg-preview.png" alt="">
+                </a>
+            </figure>
+        </div>
+        <div>   
+            <div class="box">
+                <div class="sobre-nosotros">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <p>Escuela primaria y secundaria.</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div>   
+            <div class="box">
+                <div class="explora">
+                    <h2>    EXPLORA</h2>
+                    <ul>
+                        <a href="#inicio">Inicio</a>
+                        <a href="https://escuela4221valentinbianchi.wordpress.com/biblioteca/">Biblioteca</a>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+        <div class="box">
+            <div class="redes-contacto">
+                <div class="contacto">
+                    <h2>CONTACTO</h2>
+                </div>
+                <div class="redes">
+                    <a href="https://www.instagram.com/valentinbianchi.4221/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100012219702422" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2023 <b>Escuela V. Bianchi</b> - Todos los derechos reservados </small>
+    </div>
 </footer>
-
 
 <script src="/client/js/body.js"></script>
 </body>
